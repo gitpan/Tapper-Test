@@ -3,7 +3,7 @@ package Tapper::Test;
 use warnings;
 use strict;
 
-our $VERSION = '3.000004';
+our $VERSION = '3.000010';
 
 use 5.010;
 
@@ -173,9 +173,18 @@ Tapper::Test - Tapper - Utilities for Perl based Tapper testing
 
 =head1 SYNOPSIS
 
-    use Tapper::Test;
-    my $foo = Tapper::Test->new();
-    ...
+ use Tapper::Test;
+ tapper_suite_meta();
+
+=head1 DESCRIPTION
+
+When running tests in Tapper the Tapper report framework expects a
+number of metainformation about the test system. To generate these
+metainformation you can use Tapper::Test. Call
+Tapper::Test::tapper_suite_meta() in your perl test script. This will
+print the metainformation to STDOUT in the format Tapper expects (TAP
+headers). See L<Tapper::Doc|Tapper::Doc> for more information on Tapper
+testing.
 
 =head1 AUTHOR
 
