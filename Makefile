@@ -20,7 +20,7 @@
 #     NAME => q[Tapper::Test]
 #     NO_META => q[1]
 #     PREREQ_PM => { Test::Perl::Critic=>q[0], Test::More=>q[0], parent=>q[0], Sys::Info=>q[0], ExtUtils::MakeMaker=>q[6.42], Format::Human::Bytes=>q[0] }
-#     VERSION => q[3.000011]
+#     VERSION => q[3.000012]
 #     VERSION_FROM => q[lib/Tapper/Test.pm]
 #     dist => { PREOP=>q[$(PERL) -I. "-MModule::Install::Admin" -e "dist_preop(q($(DISTVNAME)))"] }
 #     realclean => { FILES=>q[MYMETA.yml] }
@@ -31,7 +31,7 @@
 
 # --- MakeMaker const_config section:
 
-# These definitions are from config.sh (via /opt/tapper/perl/perls/perl-5.12.3/lib/5.12.3/x86_64-linux/Config.pm).
+# These definitions are from config.sh (via /home/ss5/perl5/perlbrew/perls/perl-5.12.2/lib/5.12.2/i686-linux/Config.pm).
 # They may have been overridden via Makefile.PL or on the command line.
 AR = ar
 CC = cc
@@ -44,14 +44,14 @@ FULL_AR = /usr/bin/ar
 LD = cc
 LDDLFLAGS = -shared -O2 -L/usr/local/lib -fstack-protector
 LDFLAGS =  -fstack-protector -L/usr/local/lib
-LIBC = /lib/libc-2.12.1.so
+LIBC = /lib/libc-2.10.1.so
 LIB_EXT = .a
 OBJ_EXT = .o
 OSNAME = linux
-OSVERS = 2.6.35-28-generic
+OSVERS = 2.6.31-22-generic
 RANLIB = :
-SITELIBEXP = /opt/tapper/perl/perls/perl-5.12.3/lib/site_perl/5.12.3
-SITEARCHEXP = /opt/tapper/perl/perls/perl-5.12.3/lib/site_perl/5.12.3/x86_64-linux
+SITELIBEXP = /home/ss5/perl5/perlbrew/perls/perl-5.12.2/lib/site_perl/5.12.2
+SITEARCHEXP = /home/ss5/perl5/perlbrew/perls/perl-5.12.2/lib/site_perl/5.12.2/i686-linux
 SO = so
 VENDORARCHEXP = 
 VENDORLIBEXP = 
@@ -63,11 +63,11 @@ DIRFILESEP = /
 DFSEP = $(DIRFILESEP)
 NAME = Tapper::Test
 NAME_SYM = Tapper_Test
-VERSION = 3.000011
+VERSION = 3.000012
 VERSION_MACRO = VERSION
-VERSION_SYM = 3_000011
+VERSION_SYM = 3_000012
 DEFINE_VERSION = -D$(VERSION_MACRO)=\"$(VERSION)\"
-XS_VERSION = 3.000011
+XS_VERSION = 3.000012
 XS_VERSION_MACRO = XS_VERSION
 XS_DEFINE_VERSION = -D$(XS_VERSION_MACRO)=\"$(XS_VERSION)\"
 INST_ARCHLIB = blib/arch
@@ -81,55 +81,55 @@ MAN3EXT = 3
 INSTALLDIRS = site
 DESTDIR = 
 PREFIX = $(SITEPREFIX)
-PERLPREFIX = /opt/tapper/perl/perls/perl-5.12.3
-SITEPREFIX = /opt/tapper/perl/perls/perl-5.12.3
+PERLPREFIX = /home/ss5/perl5/perlbrew/perls/perl-5.12.2
+SITEPREFIX = /home/ss5/perl5/perlbrew/perls/perl-5.12.2
 VENDORPREFIX = 
-INSTALLPRIVLIB = /opt/tapper/perl/perls/perl-5.12.3/lib/5.12.3
+INSTALLPRIVLIB = /home/ss5/perl5/perlbrew/perls/perl-5.12.2/lib/5.12.2
 DESTINSTALLPRIVLIB = $(DESTDIR)$(INSTALLPRIVLIB)
-INSTALLSITELIB = /opt/tapper/perl/perls/perl-5.12.3/lib/site_perl/5.12.3
+INSTALLSITELIB = /home/ss5/perl5/perlbrew/perls/perl-5.12.2/lib/site_perl/5.12.2
 DESTINSTALLSITELIB = $(DESTDIR)$(INSTALLSITELIB)
 INSTALLVENDORLIB = 
 DESTINSTALLVENDORLIB = $(DESTDIR)$(INSTALLVENDORLIB)
-INSTALLARCHLIB = /opt/tapper/perl/perls/perl-5.12.3/lib/5.12.3/x86_64-linux
+INSTALLARCHLIB = /home/ss5/perl5/perlbrew/perls/perl-5.12.2/lib/5.12.2/i686-linux
 DESTINSTALLARCHLIB = $(DESTDIR)$(INSTALLARCHLIB)
-INSTALLSITEARCH = /opt/tapper/perl/perls/perl-5.12.3/lib/site_perl/5.12.3/x86_64-linux
+INSTALLSITEARCH = /home/ss5/perl5/perlbrew/perls/perl-5.12.2/lib/site_perl/5.12.2/i686-linux
 DESTINSTALLSITEARCH = $(DESTDIR)$(INSTALLSITEARCH)
 INSTALLVENDORARCH = 
 DESTINSTALLVENDORARCH = $(DESTDIR)$(INSTALLVENDORARCH)
-INSTALLBIN = /opt/tapper/perl/perls/perl-5.12.3/bin
+INSTALLBIN = /home/ss5/perl5/perlbrew/perls/perl-5.12.2/bin
 DESTINSTALLBIN = $(DESTDIR)$(INSTALLBIN)
-INSTALLSITEBIN = /opt/tapper/perl/perls/perl-5.12.3/bin
+INSTALLSITEBIN = /home/ss5/perl5/perlbrew/perls/perl-5.12.2/bin
 DESTINSTALLSITEBIN = $(DESTDIR)$(INSTALLSITEBIN)
 INSTALLVENDORBIN = 
 DESTINSTALLVENDORBIN = $(DESTDIR)$(INSTALLVENDORBIN)
-INSTALLSCRIPT = /opt/tapper/perl/perls/perl-5.12.3/bin
+INSTALLSCRIPT = /home/ss5/perl5/perlbrew/perls/perl-5.12.2/bin
 DESTINSTALLSCRIPT = $(DESTDIR)$(INSTALLSCRIPT)
-INSTALLSITESCRIPT = /opt/tapper/perl/perls/perl-5.12.3/bin
+INSTALLSITESCRIPT = /home/ss5/perl5/perlbrew/perls/perl-5.12.2/bin
 DESTINSTALLSITESCRIPT = $(DESTDIR)$(INSTALLSITESCRIPT)
 INSTALLVENDORSCRIPT = 
 DESTINSTALLVENDORSCRIPT = $(DESTDIR)$(INSTALLVENDORSCRIPT)
-INSTALLMAN1DIR = /opt/tapper/perl/perls/perl-5.12.3/man/man1
+INSTALLMAN1DIR = /home/ss5/perl5/perlbrew/perls/perl-5.12.2/man/man1
 DESTINSTALLMAN1DIR = $(DESTDIR)$(INSTALLMAN1DIR)
-INSTALLSITEMAN1DIR = /opt/tapper/perl/perls/perl-5.12.3/man/man1
+INSTALLSITEMAN1DIR = /home/ss5/perl5/perlbrew/perls/perl-5.12.2/man/man1
 DESTINSTALLSITEMAN1DIR = $(DESTDIR)$(INSTALLSITEMAN1DIR)
 INSTALLVENDORMAN1DIR = 
 DESTINSTALLVENDORMAN1DIR = $(DESTDIR)$(INSTALLVENDORMAN1DIR)
-INSTALLMAN3DIR = /opt/tapper/perl/perls/perl-5.12.3/man/man3
+INSTALLMAN3DIR = /home/ss5/perl5/perlbrew/perls/perl-5.12.2/man/man3
 DESTINSTALLMAN3DIR = $(DESTDIR)$(INSTALLMAN3DIR)
-INSTALLSITEMAN3DIR = /opt/tapper/perl/perls/perl-5.12.3/man/man3
+INSTALLSITEMAN3DIR = /home/ss5/perl5/perlbrew/perls/perl-5.12.2/man/man3
 DESTINSTALLSITEMAN3DIR = $(DESTDIR)$(INSTALLSITEMAN3DIR)
 INSTALLVENDORMAN3DIR = 
 DESTINSTALLVENDORMAN3DIR = $(DESTDIR)$(INSTALLVENDORMAN3DIR)
 PERL_LIB =
-PERL_ARCHLIB = /opt/tapper/perl/perls/perl-5.12.3/lib/5.12.3/x86_64-linux
+PERL_ARCHLIB = /home/ss5/perl5/perlbrew/perls/perl-5.12.2/lib/5.12.2/i686-linux
 LIBPERL_A = libperl.a
 FIRST_MAKEFILE = Makefile
 MAKEFILE_OLD = Makefile.old
 MAKE_APERL_FILE = Makefile.aperl
 PERLMAINCC = $(CC)
-PERL_INC = /opt/tapper/perl/perls/perl-5.12.3/lib/5.12.3/x86_64-linux/CORE
-PERL = /opt/tapper/perl/perls/perl-5.12.3/bin/perl "-Iinc"
-FULLPERL = /opt/tapper/perl/perls/perl-5.12.3/bin/perl "-Iinc"
+PERL_INC = /home/ss5/perl5/perlbrew/perls/perl-5.12.2/lib/5.12.2/i686-linux/CORE
+PERL = /home/ss5/perl5/perlbrew/perls/perl-5.12.2/bin/perl5.12.2 "-Iinc"
+FULLPERL = /home/ss5/perl5/perlbrew/perls/perl-5.12.2/bin/perl5.12.2 "-Iinc"
 ABSPERL = $(PERL)
 PERLRUN = $(PERL)
 FULLPERLRUN = $(FULLPERL)
@@ -142,7 +142,7 @@ PERM_DIR = 755
 PERM_RW = 644
 PERM_RWX = 755
 
-MAKEMAKER   = /opt/tapper/perl/perls/perl-5.12.3/lib/5.12.3/ExtUtils/MakeMaker.pm
+MAKEMAKER   = /home/ss5/perl5/perlbrew/perls/perl-5.12.2/lib/5.12.2/ExtUtils/MakeMaker.pm
 MM_VERSION  = 6.56
 MM_REVISION = 65600
 
@@ -261,7 +261,7 @@ RCS_LABEL = rcs -Nv$(VERSION_SYM): -q
 DIST_CP = best
 DIST_DEFAULT = tardist
 DISTNAME = Tapper-Test
-DISTVNAME = Tapper-Test-3.000011
+DISTVNAME = Tapper-Test-3.000012
 
 
 # --- MakeMaker macro section:
@@ -725,7 +725,7 @@ $(FIRST_MAKEFILE) : Makefile.PL $(CONFIGDEP)
 
 # --- MakeMaker makeaperl section ---
 MAP_TARGET    = perl
-FULLPERL      = /opt/tapper/perl/perls/perl-5.12.3/bin/perl
+FULLPERL      = /home/ss5/perl5/perlbrew/perls/perl-5.12.2/bin/perl5.12.2
 
 $(MAP_TARGET) :: static $(MAKE_APERL_FILE)
 	$(MAKE) $(USEMAKEFILE) $(MAKE_APERL_FILE) $@
@@ -769,7 +769,7 @@ testdb_static :: testdb_dynamic
 # --- MakeMaker ppd section:
 # Creates a PPD (Perl Package Description) for a binary distribution.
 ppd :
-	$(NOECHO) $(ECHO) '<SOFTPKG NAME="$(DISTNAME)" VERSION="3.000011">' > $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '<SOFTPKG NAME="$(DISTNAME)" VERSION="3.000012">' > $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <ABSTRACT>Tapper - Utilities for Perl based Tapper testing</ABSTRACT>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <AUTHOR>AMD OSRC Tapper Team, C&lt;&lt; &lt;tapper at amd64.org&gt; &gt;&gt;, AMD OSRC Tapper Team &lt;tapper@amd64.org&gt;</AUTHOR>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <IMPLEMENTATION>' >> $(DISTNAME).ppd
@@ -778,7 +778,7 @@ ppd :
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Sys::Info" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Test::More" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="parent::" />' >> $(DISTNAME).ppd
-	$(NOECHO) $(ECHO) '        <ARCHITECTURE NAME="x86_64-linux-5.12" />' >> $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '        <ARCHITECTURE NAME="i686-linux-5.12" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <CODEBASE HREF="" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    </IMPLEMENTATION>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '</SOFTPKG>' >> $(DISTNAME).ppd
@@ -799,7 +799,7 @@ pm_to_blib : $(FIRST_MAKEFILE) $(TO_INST_PM)
 
 
 # End.
-# Postamble by Module::Install 1.01
+# Postamble by Module::Install 1.00
 # --- Module::Install::Admin::Makefile section:
 
 realclean purge ::
