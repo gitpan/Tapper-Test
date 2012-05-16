@@ -1,9 +1,14 @@
 package Tapper::Test;
+BEGIN {
+  $Tapper::Test::AUTHORITY = 'cpan:AMD';
+}
+{
+  $Tapper::Test::VERSION = '4.0.1';
+}
+# ABSTRACT: Tapper - Utilities for Perl based Tapper testing
 
 use warnings;
 use strict;
-
-our $VERSION = '3.000012';
 
 use 5.010;
 
@@ -105,7 +110,7 @@ sub _suite_version
                 } else {
                         $suite_version = $params->[2]->{dist_version}->{original};
                 }
-                
+
                 return $suite_version;
         }
         elsif (-e $makefile)
@@ -133,6 +138,7 @@ sub _language_description {
 sub _reportgroup_arbitrary { $ENV{TAPPER_REPORT_GROUP} }
 sub _reportgroup_testrun   { $ENV{TAPPER_TESTRUN}   }
 
+
 sub tapper_suite_meta
 {
         my %opts = @_;
@@ -159,6 +165,7 @@ sub tapper_suite_meta
         tapper_section_meta(@_);
 }
 
+
 sub tapper_section_meta
 {
         my %opts = @_;
@@ -183,6 +190,14 @@ sub tapper_section_meta
 }
 
 
+
+1; # End of Tapper::Test
+
+__END__
+=pod
+
+=encoding utf-8
+
 =head1 NAME
 
 Tapper::Test - Tapper - Utilities for Perl based Tapper testing
@@ -202,17 +217,25 @@ print the metainformation to STDOUT in the format Tapper expects (TAP
 headers). See L<Tapper::Doc|Tapper::Doc> for more information on Tapper
 testing.
 
+=head2 tapper_suite_meta
+
+Provides general meta information applying to the whole report.
+
+=head2 tapper_section_meta
+
+Provides meta information allowed to be repeated in several sections.
+
 =head1 AUTHOR
 
-AMD OSRC Tapper Team, C<< <tapper at amd64.org> >>
+AMD OSRC Tapper Team <tapper@amd64.org>
 
-=head1 COPYRIGHT & LICENSE
+=head1 COPYRIGHT AND LICENSE
 
-Copyright 2008-2011 AMD OSRC Tapper Team, all rights reserved.
+This software is Copyright (c) 2012 by Advanced Micro Devices, Inc..
 
-This program is released under the following license: freebsd
+This is free software, licensed under:
 
+  The (two-clause) FreeBSD License
 
 =cut
 
-1; # End of Tapper::Test

@@ -1,3 +1,10 @@
+Revision history for Tapper-Test
+
+4.0.1     2012-05-16
+        - platform independent sysinfo
+        - fix tests
+        - big Dist::Zilla roundhouse kick
+
 2011-11-24  Steffen Schwigon  <ss5@renormalist.net>
 
 	* v3.0.12
