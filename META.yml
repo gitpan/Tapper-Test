@@ -26,7 +26,7 @@ resources:
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=Tapper-Test
   homepage: http://metacpan.org/release/Tapper-Test
   repository: git://github.com/amd/Tapper-Test.git
-version: 4.0.1
+version: 4.0.2
 x_Dist_Zilla:
   plugins:
     -

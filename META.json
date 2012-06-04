@@ -46,7 +46,7 @@
          "web" : "http://github.com/amd/Tapper-Test"
       }
    },
-   "version" : "4.0.1",
+   "version" : "4.0.2",
    "x_Dist_Zilla" : {
       "plugins" : [
          {

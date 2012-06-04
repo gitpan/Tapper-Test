@@ -3,7 +3,7 @@ BEGIN {
   $Tapper::Test::AUTHORITY = 'cpan:AMD';
 }
 {
-  $Tapper::Test::VERSION = '4.0.1';
+  $Tapper::Test::VERSION = '4.0.2';
 }
 # ABSTRACT: Tapper - Utilities for Perl based Tapper testing
 
@@ -77,6 +77,7 @@ sub _suite_name
 {
         my $build_paramfile = '_build/build_params';
         my $makefile        = 'Makefile';
+        my $distini         = 'dist.ini';
 
         if (-e $build_paramfile )
         {
@@ -86,13 +87,26 @@ sub _suite_name
         }
         elsif (-e $makefile)
         {
-                my $suite_name = `grep '^DISTNAME = ' Makefile | head -1 | cut -d= -f2-`;
+                my $infile = $makefile;
+                open my $F, "<", $infile or die "Cannot open $infile";
+                my ($suite_name) = grep { /^DISTNAME *=/ } <$F>;
+                $suite_name =~ s/^.*=\s*//;
                 chomp $suite_name;
-                $suite_name =~ s/^\s*//;
                 return $suite_name;
-        } else
+        }
+        elsif (-e $distini)
         {
-                die 'Cannot access $build_paramfile or $makefile.\nPlease run perl Build.PL or perl Makefile.PL.';
+                my $infile = $distini;
+                open my $F, "<", $infile or die "Cannot open $infile";
+                my ($suite_name) = grep { /^name *=/ } <$F>;
+                $suite_name =~ s/^.*=\s*//;
+                chomp $suite_name;
+                return $suite_name;
+        }
+        else
+        {
+                warn "Cannot access $build_paramfile or $makefile.\nPlease run perl Build.PL or perl Makefile.PL.\n";
+                return undef;
         }
 }
 
@@ -100,6 +114,7 @@ sub _suite_version
 {
         my $build_paramfile = '_build/build_params';
         my $makefile        = 'Makefile';
+        my $distini         = 'dist.ini';
 
         if (-e $build_paramfile )
         {
@@ -110,19 +125,25 @@ sub _suite_version
                 } else {
                         $suite_version = $params->[2]->{dist_version}->{original};
                 }
-
                 return $suite_version;
         }
         elsif (-e $makefile)
         {
-                my $suite_version = `grep '^VERSION = ' Makefile | head -1 | cut -d= -f2-`;
+                my $infile = $makefile;
+                open my $F, "<", $infile or die "Cannot open $infile";
+                my ($suite_version) = grep { /^VERSION *=/ } <$F>;
+                $suite_version =~ s/^.*=\s*//;
                 chomp $suite_version;
-                $suite_version =~ s/^\s*//;
                 return $suite_version;
+        }
+        elsif (-e $distini)
+        {
+                return undef;
         }
         else
         {
-                die 'Cannot access $build_paramfile or $makefile.\nPlease run perl Build.PL or perl Makefile.PL.';
+                warn "Cannot access $build_paramfile or $makefile.\nPlease run perl Build.PL or perl Makefile.PL\n";
+                return undef;
         }
 }
 
