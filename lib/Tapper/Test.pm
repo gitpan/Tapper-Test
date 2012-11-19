@@ -1,11 +1,11 @@
 package Tapper::Test;
-# git description: v4.0.2-1-g45835d6
+# git description: v4.1.1-1-g2583c93
 
 BEGIN {
-  $Tapper::Test::AUTHORITY = 'cpan:AMD';
+  $Tapper::Test::AUTHORITY = 'cpan:TAPPER';
 }
 {
-  $Tapper::Test::VERSION = '4.1.1';
+  $Tapper::Test::VERSION = '4.1.2';
 }
 # ABSTRACT: Tapper - Utilities for Perl based Tapper testing
 
